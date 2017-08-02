@@ -1,0 +1,7 @@
+function Guestbook () {
+
+}
+
+Guestbook.prototype = {
+
+}
