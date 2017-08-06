@@ -1,6 +1,10 @@
+var guestbook = require('../models/guestbook.js')
+
 function guestbookController (app) {
     app.get('/', function (req, res) {
-        res.render('home')
+        res.render('home', {
+            guestbook: guestbook.getItems()
+        })
     })
 }
 

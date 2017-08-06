@@ -5,17 +5,18 @@
 </form>
 
 <table>
+  {{#each guestbook}}
   <tr>
     <th>Person</th>
     <th>Comment</th> 
   </tr>
   <tr>
-    <td>Person One</td>
-    <td>Comment One</td> 
-  </tr>
-  <tr>
-    <td>Person Two</td>
-    <td>Comment Two</td> 
+    <td data-id="{{id}}">{{#each guestbook}}
+      <li>{{name}}</li>
+    {{/each}}</td>
+    <td>{{#each guestbook}}
+      <li>{{comment}}</li>
+    {{/each}}</td> 
   </tr>
 </table>
 
