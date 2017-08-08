@@ -1,33 +1,10 @@
-var randomID = require('random-id')
+var mongoose = require('mongoose')
 
-function Guestbook () {
-this._items =[]
-}
+var guestbookSchema = new mongoose.Schema({
+  name: String,
+  comment:String
+})
 
-Guestbook.prototype = {
-    getItems: function () {
-    return this._items
-  },
+var Guestbook = mongoose.model('Guestbook', guestbookSchema)
 
-    addItem: function(name, comment){
-        this._items.push({
-            id: randomID(),
-            name: name,
-            comment: comment
-        })
-    },
-
-    removeItem: function(id){
-        this._items = this._items.filter(function (item) {
-            return item.id !== id
-    })
-    }
-}
-
-var guestbook = new Guestbook()
-
-/*guestbook.addItem('Jacqui', 'Great visit')
-guestbook.addItem('James', 'Didnt enjoy my visit')
-guestbook.addItem('Rachel', 'Loved it')*/
-
-module.exports = guestbook
+module.exports = Guestbook

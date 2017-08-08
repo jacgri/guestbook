@@ -18,8 +18,10 @@
   "homepage": "https://github.com/jacgri/guestbook#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.6",
     "random-id": "0.0.2"
   }
 }
