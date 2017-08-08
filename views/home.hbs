@@ -1,22 +1,12 @@
 <form method="post">
-  <input type="text" name="Person" placeholder="Please enter your name...">
-  <input type="text" name="Comment" placeholder="Please enter your comment...">
+  <input type="text" name="name" placeholder="Please enter your name...">
+  <input type="text" name="comment" placeholder="Please enter your comment...">
   <button type="submit">Add</button>
 </form>
 
-<table>
-  {{#each guestbook}}
-  <tr>
-    <th>Person</th>
-    <th>Comment</th> 
-  </tr>
-  <tr>
-    <td data-id="{{id}}">{{#each guestbook}}
-      <li>{{name}}</li>
-    {{/each}}</td>
-    <td>{{#each guestbook}}
-      <li>{{comment}}</li>
-    {{/each}}</td> 
-  </tr>
-</table>
+<ul>
+    {{#each guestbook}}
+        <li data-id="{{id}}">{{name}} <br> <br>{{comment}}</li>
+    {{/each}}   
+</ul>
 
